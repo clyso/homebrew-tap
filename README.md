@@ -9,7 +9,7 @@ brew install clyso/tap/<formula>
 Or `brew tap clyso/tap` and then `brew install <formula>`.
 
 ### Formulas:
-1) [chorctl](https://github.com/clyso/chorus/tools/chorctl): `brew install clyso/tap/chorctl`
+1) [chorctl](https://github.com/clyso/chorus/tree/main/tools/chorctl): `brew install clyso/tap/chorctl`
 
 ## Documentation
 
