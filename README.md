@@ -2,7 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install clyso/tap/<formula>`
+```shell
+brew install clyso/tap/<formula>
+```
 
 Or `brew tap clyso/tap` and then `brew install <formula>`.
 
