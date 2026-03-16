@@ -5,21 +5,21 @@
 class Chorctl < Formula
   desc "Management CLI for chorus service"
   homepage "https://github.com/clyso/chorus"
-  version "0.7.2"
+  version "0.7.3"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/clyso/chorus/releases/download/v0.7.2/chorctl_v0.7.2_darwin_amd64.tar.gz"
-      sha256 "37e4a0671f773ec4b632ba268b0b9a22821879999c10e8da09301d1f7185eeb9"
+    on_intel do
+      url "https://github.com/clyso/chorus/releases/download/v0.7.3/chorctl_v0.7.3_darwin_amd64.tar.gz"
+      sha256 "8d4a57a3d748c70d50095da2966f6f6959f7c85c2e01ee7b6fb2a73ffa36e1fc"
 
       def install
         bin.install "chorctl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/clyso/chorus/releases/download/v0.7.2/chorctl_v0.7.2_darwin_arm64.tar.gz"
-      sha256 "759b1135fc498e2f61e6ec4847c34e22415557d63a3701566887e492d8d8a303"
+    on_arm do
+      url "https://github.com/clyso/chorus/releases/download/v0.7.3/chorctl_v0.7.3_darwin_arm64.tar.gz"
+      sha256 "cfa3ca42a6a097edf0135fbc8998b98e0c57cc10c29db94f0e6e4c92fccd3f6e"
 
       def install
         bin.install "chorctl"
@@ -28,20 +28,24 @@ class Chorctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/clyso/chorus/releases/download/v0.7.2/chorctl_v0.7.2_linux_amd64.tar.gz"
-      sha256 "e7d19ba856b91d833ff7b9c629ea6dc327857d5b2d05c2b3c09408053fc2ad46"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/clyso/chorus/releases/download/v0.7.3/chorctl_v0.7.3_linux_amd64.tar.gz"
+        sha256 "61795f4d17ae918efbe771a6bf75157b21cf17137524f0ac9f4c20de3ed7b47a"
 
-      def install
-        bin.install "chorctl"
+        def install
+          bin.install "chorctl"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clyso/chorus/releases/download/v0.7.2/chorctl_v0.7.2_linux_arm64.tar.gz"
-      sha256 "0da7fb0abb7301814f61ed38be405daf822b464c65654ff975ad9674327df18b"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/clyso/chorus/releases/download/v0.7.3/chorctl_v0.7.3_linux_arm64.tar.gz"
+        sha256 "64a83e07a4f71ee40e1f7f356a6ae1718db2d8ba888431e0ee5148242168a42b"
 
-      def install
-        bin.install "chorctl"
+        def install
+          bin.install "chorctl"
+        end
       end
     end
   end
