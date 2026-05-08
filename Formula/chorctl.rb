@@ -5,21 +5,21 @@
 class Chorctl < Formula
   desc "Management CLI for chorus service"
   homepage "https://github.com/clyso/chorus"
-  version "0.7.4"
+  version "0.7.5"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/clyso/chorus/releases/download/v0.7.4/chorctl_v0.7.4_darwin_amd64.tar.gz"
-      sha256 "48af1f03c2439ef81f7420bde4487d48bd7946b6d3789d6a578f585e30b7cbfa"
+      url "https://github.com/clyso/chorus/releases/download/v0.7.5/chorctl_v0.7.5_darwin_amd64.tar.gz"
+      sha256 "656c70f53be40376ab1751420804f5d17385d9b34c4aa541a31b9eee6bcb25b7"
 
       def install
         bin.install "chorctl"
       end
     end
     on_arm do
-      url "https://github.com/clyso/chorus/releases/download/v0.7.4/chorctl_v0.7.4_darwin_arm64.tar.gz"
-      sha256 "ea96b6aa943a86f66dd654ed79f48c0ac128bf515e29a2432ac14bb3970b0882"
+      url "https://github.com/clyso/chorus/releases/download/v0.7.5/chorctl_v0.7.5_darwin_arm64.tar.gz"
+      sha256 "aaed3b02751369cce1155861b2614326c1455cbf731eccc756a69860b06d0961"
 
       def install
         bin.install "chorctl"
@@ -30,8 +30,8 @@ class Chorctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clyso/chorus/releases/download/v0.7.4/chorctl_v0.7.4_linux_amd64.tar.gz"
-        sha256 "747dcfc5523bfb3bfd50634eec373be5430e4b4276e0bacb463ab59992b89508"
+        url "https://github.com/clyso/chorus/releases/download/v0.7.5/chorctl_v0.7.5_linux_amd64.tar.gz"
+        sha256 "9708c9176869d27d8ee9461e39fadebdfaee37aa93faa093d7dae4c03bcc4e1c"
 
         def install
           bin.install "chorctl"
@@ -40,8 +40,8 @@ class Chorctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clyso/chorus/releases/download/v0.7.4/chorctl_v0.7.4_linux_arm64.tar.gz"
-        sha256 "3e63e5026a2267c67978c0c7624e2c8c1c9804d8842c3c755b6853c0d705bad4"
+        url "https://github.com/clyso/chorus/releases/download/v0.7.5/chorctl_v0.7.5_linux_arm64.tar.gz"
+        sha256 "c23466a77d59d4f4d00406076be2af08a1afb8d98bc1c675b7cabf73d243301b"
 
         def install
           bin.install "chorctl"
